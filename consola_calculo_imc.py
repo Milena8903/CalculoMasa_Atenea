@@ -12,25 +12,18 @@ This is a temporary script file.
 #peso = float(input("Por favor escriba su peso en Kg: "));
 #altura = float(input("Por favor escriba su altura en mtrs: "));
 
-# Realizar las funciones
-#def imc(peso, altura):
-#    return peso/(altura**2)
 
-# Realizar operacion
-#imc = peso/(altura**2)
 
 # Llamo a la función
 #print("Su indice de masa es: " );
 #print(imc);
 
 
-def imc(peso:float, altura:float)-> str:
+def imc(peso:float, altura:float):
     imc = peso/(altura**2)
-    
-    respuesta = " El indice de masa corporal es " + str(imc)  
-                  
-                 
-#Se retorna el string
-    return respuesta
+    return imc
 
+def porcentaje_grasa_corporal(edad:int, genero):
+    gc = 1.2 * float(imc) + 0.23 * edad - 5.4 - genero
+    return gc
 
