@@ -5,25 +5,20 @@ Spyder Editor
 This is a temporary script file.
 """
 
-# Declaración de las variables
-# Realización del casteo
-# Solicita datos al usuario
+import calculadora_indices as calc
 
-#peso = float(input("Por favor escriba su peso en Kg: "));
-#altura = float(input("Por favor escriba su altura en mtrs: "));
-
-
-
-# Llamo a la función
-#print("Su indice de masa es: " );
-#print(imc);
-
-
-def imc(peso:float, altura:float):
-    imc = peso/(altura**2)
+def calcular_imc():
+    peso = float(input(" Por favor escriba su peso en Kg: "))
+    altura = float(input(" Por favor escriba su altura en mtrs: "))
+    imc = calc.calcular_imc(peso, altura)
+    imc = round(imc,2)
+    print("\n Su indice de masa corporal es: " , imc)
     return imc
 
-def porcentaje_grasa_corporal(edad:int, genero):
-    gc = 1.2 * float(imc) + 0.23 * edad - 5.4 - genero
-    return gc
+def iniciar_aplicacion()->None:
+    print(" Calculemos su índice de masa corporal \n")
+    calcular_imc()
 
+ 
+#PROGRAMA PRINCIPAL
+iniciar_aplicacion()
