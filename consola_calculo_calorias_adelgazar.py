@@ -17,7 +17,7 @@ def consumo_calorias_recomendado_para_adelgazar():
     
     resultado = calc.consumo_calorias_recomendado_para_adelgazar(peso, altura, edad, \
                                                                  valor_genero)
-        
+    resultado = str(resultado)    
     return resultado
        
 

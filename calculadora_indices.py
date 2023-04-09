@@ -27,19 +27,14 @@ def calcular_calorias_en_actividad(peso:float, altura:int, edad:int, valor_gener
 def consumo_calorias_recomendado_para_adelgazar(peso:float, altura:int, edad:int, \
                                                 valor_genero:float)->str:
     tmb = float(calcular_calorias_en_reposo(peso, altura, edad, valor_genero))
-    rango_superior = tmb - (tmb * (15/100))
-    rango_inferior = tmb - (tmb * (20/100))
+    rango_superior = round(tmb - (tmb * (15/100)), 2)
+    rango_inferior = round(tmb - (tmb * (20/100)), 1)
     
     respuesta = "Para adelgazar es recomendado que consumas entre: " + str(rango_inferior) \
                   + " y " + str(rango_superior) + " calorías al día. Siendo "\
                   + str(rango_inferior) + " el rango inferior y " \
                   + str(rango_superior) +  " el rango superior."
     
+    print(respuesta)
     return respuesta
 
-#peso = 81
-#altura = 175
-#edad = 20
-#valor_genero = 5
-#print(consumo_calorias_recomendado_para_adelgazar(peso, altura, edad, valor_genero))
-#print(calcular_calorias_en_reposo(peso, altura, edad, valor_genero))
